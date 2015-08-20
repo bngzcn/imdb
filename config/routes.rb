@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   devise_for :users
  root to: "home#index"
 
- resources :movies do 
- 	resources :casts
- end
+ resources :movies 
+
+ resources :casts
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
