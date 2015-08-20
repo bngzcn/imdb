@@ -45,6 +45,6 @@ class CastsController < ApplicationController
     end
 
     def cast_params
-    	params.require(:cast).permit(:name, :birtday, :bio)
+    	params.require(:cast).permit(:name, :birtday, :bio, :avatar)
 	end		
 end
