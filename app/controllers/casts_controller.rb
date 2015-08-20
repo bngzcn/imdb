@@ -14,6 +14,8 @@ class CastsController < ApplicationController
 	end
 
 	def show
+		@movies_acted = @cast.movies_acted
+  		@movies_directed = @cast.movies_directed
 
 	end
 

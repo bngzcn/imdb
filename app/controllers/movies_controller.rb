@@ -15,7 +15,8 @@ class MoviesController < ApplicationController
     end
 
   	def show
-    	
+  		@directors = @movie.directors
+  		@actors = @movie.actors    	
     end
 
     def update

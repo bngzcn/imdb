@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-	has_many :casts
+	
 	has_many :director_movies
 	has_many :actor_movies
 
