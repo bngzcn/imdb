@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
 	before_action :set_movie, only: [:show, :edit, :update, :destroy]
 	
 	def index
-		@movies = Movie.all
+		@movies = Movie.all.page params[:page]
 	end
 
 	def new
@@ -41,7 +41,7 @@ class MoviesController < ApplicationController
 
     private
     def set_movie
-    	@movie = Movie.find(params[:id])
+    	@movie = Movie.friendly.find(params[:id])
     end
 
     def movie_params

@@ -1,4 +1,10 @@
 class Cast < ActiveRecord::Base
+
+	extend FriendlyId
+	friendly_id :name, use: :slugged
+
+	paginates_per 2
+
 	has_many :director_movies
 	has_many :actor_movies
 

@@ -1,5 +1,10 @@
 class Movie < ActiveRecord::Base
 	
+	extend FriendlyId
+	friendly_id :title, use: :slugged
+
+	paginates_per 2
+
 	has_many :director_movies
 	has_many :actor_movies
 
