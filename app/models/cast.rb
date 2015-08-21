@@ -1,5 +1,7 @@
 class Cast < ActiveRecord::Base
 
+	ratyrate_rateable "name", "birtday", "bio"
+
 	extend FriendlyId
 	friendly_id :name, use: :slugged
 

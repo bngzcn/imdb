@@ -9,6 +9,8 @@ Bio: <%= @cast.bio %><br/>
 <%= link_to 'Back', casts_path %>
 </br>
 
+<%= rating_for @cast, "name" %>
+
 <h2>Movies Acted</h2>
 <% @movies_acted.each do |movie| %>
 	<%= link_to movie.title, movie %>

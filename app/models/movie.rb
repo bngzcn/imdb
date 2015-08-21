@@ -1,5 +1,7 @@
 class Movie < ActiveRecord::Base
 	
+	ratyrate_rateable "title", "storyline", "country"
+
 	extend FriendlyId
 	friendly_id :title, use: :slugged
 

@@ -58,3 +58,5 @@ gem 'cancancan', '~> 1.10'
 gem 'pry-rails'
 
 gem 'pry'
+
+gem 'ratyrate'

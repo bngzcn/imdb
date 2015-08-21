@@ -10,6 +10,7 @@ Country: <%= @movie.country %><br/>
 <%= link_to 'Back', movies_path %>
 </br>
 
+<%= rating_for @movie, "title" %>
 
 <h2>Directors</h2>
 <% @directors.each do |director| %>
