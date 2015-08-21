@@ -3,9 +3,11 @@ Name: <%= @cast.name %><br/>
 Birtday: <%= @cast.birtday %><br/>
 Bio: <%= @cast.bio %><br/>
 
+<% if can? :create, @cast %>
 <%= link_to 'Edit', edit_cast_path(@cast)  %>
+<% end %>
 <%= link_to 'Back', casts_path %>
-
+</br>
 
 <h2>Movies Acted</h2>
 <% @movies_acted.each do |movie| %>
